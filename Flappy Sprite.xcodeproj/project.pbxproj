@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F26AE3E235B9443000EFECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26AE3D235B9443000EFECF /* AppDelegate.swift */; };
+		7F26AE40235B9443000EFECF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE3F235B9443000EFECF /* GameScene.sks */; };
+		7F26AE42235B9443000EFECF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE41235B9443000EFECF /* Actions.sks */; };
+		7F26AE44235B9443000EFECF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26AE43235B9443000EFECF /* GameScene.swift */; };
+		7F26AE46235B9443000EFECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26AE45235B9443000EFECF /* ViewController.swift */; };
+		7F26AE48235B9445000EFECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE47235B9445000EFECF /* Assets.xcassets */; };
+		7F26AE4B235B9445000EFECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE49235B9445000EFECF /* Main.storyboard */; };
+		7F26AE57235B9445000EFECF /* Flappy_SpriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26AE56235B9445000EFECF /* Flappy_SpriteTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F26AE53235B9445000EFECF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F26AE32235B9443000EFECF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F26AE39235B9443000EFECF;
+			remoteInfo = "Flappy Sprite";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F26AE3A235B9443000EFECF /* Flappy Sprite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Sprite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F26AE3D235B9443000EFECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F26AE3F235B9443000EFECF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		7F26AE41235B9443000EFECF /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		7F26AE43235B9443000EFECF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		7F26AE45235B9443000EFECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F26AE47235B9445000EFECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F26AE4A235B9445000EFECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F26AE4C235B9445000EFECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F26AE4D235B9445000EFECF /* Flappy_Sprite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Flappy_Sprite.entitlements; sourceTree = "<group>"; };
+		7F26AE52235B9445000EFECF /* Flappy SpriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flappy SpriteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F26AE56235B9445000EFECF /* Flappy_SpriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_SpriteTests.swift; sourceTree = "<group>"; };
+		7F26AE58235B9445000EFECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F26AE37235B9443000EFECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F26AE4F235B9445000EFECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F26AE31235B9443000EFECF = {
+			isa = PBXGroup;
+			children = (
+				7F26AE3C235B9443000EFECF /* Flappy Sprite */,
+				7F26AE55235B9445000EFECF /* Flappy SpriteTests */,
+				7F26AE3B235B9443000EFECF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F26AE3B235B9443000EFECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F26AE3A235B9443000EFECF /* Flappy Sprite.app */,
+				7F26AE52235B9445000EFECF /* Flappy SpriteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F26AE3C235B9443000EFECF /* Flappy Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				7F26AE3D235B9443000EFECF /* AppDelegate.swift */,
+				7F26AE3F235B9443000EFECF /* GameScene.sks */,
+				7F26AE41235B9443000EFECF /* Actions.sks */,
+				7F26AE43235B9443000EFECF /* GameScene.swift */,
+				7F26AE45235B9443000EFECF /* ViewController.swift */,
+				7F26AE47235B9445000EFECF /* Assets.xcassets */,
+				7F26AE49235B9445000EFECF /* Main.storyboard */,
+				7F26AE4C235B9445000EFECF /* Info.plist */,
+				7F26AE4D235B9445000EFECF /* Flappy_Sprite.entitlements */,
+			);
+			path = "Flappy Sprite";
+			sourceTree = "<group>";
+		};
+		7F26AE55235B9445000EFECF /* Flappy SpriteTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F26AE56235B9445000EFECF /* Flappy_SpriteTests.swift */,
+				7F26AE58235B9445000EFECF /* Info.plist */,
+			);
+			path = "Flappy SpriteTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F26AE39235B9443000EFECF /* Flappy Sprite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F26AE5B235B9445000EFECF /* Build configuration list for PBXNativeTarget "Flappy Sprite" */;
+			buildPhases = (
+				7F26AE36235B9443000EFECF /* Sources */,
+				7F26AE37235B9443000EFECF /* Frameworks */,
+				7F26AE38235B9443000EFECF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flappy Sprite";
+			productName = "Flappy Sprite";
+			productReference = 7F26AE3A235B9443000EFECF /* Flappy Sprite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F26AE51235B9445000EFECF /* Flappy SpriteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F26AE5E235B9445000EFECF /* Build configuration list for PBXNativeTarget "Flappy SpriteTests" */;
+			buildPhases = (
+				7F26AE4E235B9445000EFECF /* Sources */,
+				7F26AE4F235B9445000EFECF /* Frameworks */,
+				7F26AE50235B9445000EFECF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F26AE54235B9445000EFECF /* PBXTargetDependency */,
+			);
+			name = "Flappy SpriteTests";
+			productName = "Flappy SpriteTests";
+			productReference = 7F26AE52235B9445000EFECF /* Flappy SpriteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F26AE32235B9443000EFECF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Mark Lifshits";
+				TargetAttributes = {
+					7F26AE39235B9443000EFECF = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					7F26AE51235B9445000EFECF = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 7F26AE39235B9443000EFECF;
+					};
+				};
+			};
+			buildConfigurationList = 7F26AE35235B9443000EFECF /* Build configuration list for PBXProject "Flappy Sprite" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F26AE31235B9443000EFECF;
+			productRefGroup = 7F26AE3B235B9443000EFECF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F26AE39235B9443000EFECF /* Flappy Sprite */,
+				7F26AE51235B9445000EFECF /* Flappy SpriteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F26AE38235B9443000EFECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F26AE40235B9443000EFECF /* GameScene.sks in Resources */,
+				7F26AE48235B9445000EFECF /* Assets.xcassets in Resources */,
+				7F26AE42235B9443000EFECF /* Actions.sks in Resources */,
+				7F26AE4B235B9445000EFECF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F26AE50235B9445000EFECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F26AE36235B9443000EFECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F26AE46235B9443000EFECF /* ViewController.swift in Sources */,
+				7F26AE44235B9443000EFECF /* GameScene.swift in Sources */,
+				7F26AE3E235B9443000EFECF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F26AE4E235B9445000EFECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F26AE57235B9445000EFECF /* Flappy_SpriteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F26AE54235B9445000EFECF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F26AE39235B9443000EFECF /* Flappy Sprite */;
+			targetProxy = 7F26AE53235B9445000EFECF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F26AE49235B9445000EFECF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F26AE4A235B9445000EFECF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F26AE59235B9445000EFECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F26AE5A235B9445000EFECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7F26AE5C235B9445000EFECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Flappy Sprite/Flappy_Sprite.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8UGV7J3SKQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Flappy Sprite/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "limar.Flappy-Sprite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7F26AE5D235B9445000EFECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Flappy Sprite/Flappy_Sprite.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8UGV7J3SKQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Flappy Sprite/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "limar.Flappy-Sprite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7F26AE5F235B9445000EFECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8UGV7J3SKQ;
+				INFOPLIST_FILE = "Flappy SpriteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "limar.Flappy-SpriteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flappy Sprite.app/Contents/MacOS/Flappy Sprite";
+			};
+			name = Debug;
+		};
+		7F26AE60235B9445000EFECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8UGV7J3SKQ;
+				INFOPLIST_FILE = "Flappy SpriteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "limar.Flappy-SpriteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flappy Sprite.app/Contents/MacOS/Flappy Sprite";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F26AE35235B9443000EFECF /* Build configuration list for PBXProject "Flappy Sprite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F26AE59235B9445000EFECF /* Debug */,
+				7F26AE5A235B9445000EFECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F26AE5B235B9445000EFECF /* Build configuration list for PBXNativeTarget "Flappy Sprite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F26AE5C235B9445000EFECF /* Debug */,
+				7F26AE5D235B9445000EFECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F26AE5E235B9445000EFECF /* Build configuration list for PBXNativeTarget "Flappy SpriteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F26AE5F235B9445000EFECF /* Debug */,
+				7F26AE60235B9445000EFECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F26AE32235B9443000EFECF /* Project object */;
+}
