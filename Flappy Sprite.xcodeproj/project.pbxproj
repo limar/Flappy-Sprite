@@ -15,6 +15,7 @@
 		7F26AE48235B9445000EFECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE47235B9445000EFECF /* Assets.xcassets */; };
 		7F26AE4B235B9445000EFECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE49235B9445000EFECF /* Main.storyboard */; };
 		7F26AE57235B9445000EFECF /* Flappy_SpriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26AE56235B9445000EFECF /* Flappy_SpriteTests.swift */; };
+		7F26AE62235C6599000EFECF /* Bird.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE61235C6599000EFECF /* Bird.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		7F26AE52235B9445000EFECF /* Flappy SpriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flappy SpriteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F26AE56235B9445000EFECF /* Flappy_SpriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_SpriteTests.swift; sourceTree = "<group>"; };
 		7F26AE58235B9445000EFECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F26AE61235C6599000EFECF /* Bird.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bird.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				7F26AE49235B9445000EFECF /* Main.storyboard */,
 				7F26AE4C235B9445000EFECF /* Info.plist */,
 				7F26AE4D235B9445000EFECF /* Flappy_Sprite.entitlements */,
+				7F26AE61235C6599000EFECF /* Bird.sks */,
 			);
 			path = "Flappy Sprite";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				7F26AE40235B9443000EFECF /* GameScene.sks in Resources */,
 				7F26AE48235B9445000EFECF /* Assets.xcassets in Resources */,
 				7F26AE42235B9443000EFECF /* Actions.sks in Resources */,
+				7F26AE62235C6599000EFECF /* Bird.sks in Resources */,
 				7F26AE4B235B9445000EFECF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
