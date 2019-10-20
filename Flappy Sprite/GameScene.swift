@@ -20,6 +20,8 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         let landNodes:[SKSpriteNode] = [1,2,3].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
 
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        
         run(SKAction.repeatForever(SKAction.sequence([
             SKAction.run{
                 landNodes.forEach { node in
@@ -31,9 +33,9 @@ class GameScene: SKScene {
             },
             SKAction.wait(forDuration: gamespeed.1)
         ])))
-        let sky = self.childNode(withName: "sky") as! SKSpriteNode
-        let frameNode = SKShapeNode(rect: sky.frame)
-        sky.addChild(frameNode)
+//        let sky = self.childNode(withName: "sky") as! SKSpriteNode
+//        let frameNode = SKShapeNode(rect: sky.frame)
+//        sky.addChild(frameNode)
         bird = self.childNode(withName: "//bird") as? SKSpriteNode
         
         // Get label node from scene and store it for use later
@@ -59,8 +61,12 @@ class GameScene: SKScene {
     
     
     func touchDown(atPoint pos : CGPoint) {
-        bird.physicsBody!.velocity = CGVector(dx: 0, dy: -10)// 10 m/s falling speed
-        bird.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 0.2))
+        let v = bird.physicsBody!.velocity
+        print(v.dy)
+        if let body = bird.physicsBody{
+            body.velocity = CGVector(dx: 0, dy: -10)// 10 m/s falling speed
+            body.applyImpulse(CGVector(dx: 0, dy: 0.2))
+        }
 //        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
 //            n.position = pos
 //            n.strokeColor = SKColor.green
@@ -110,5 +116,8 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        let vy = bird.physicsBody!.velocity.dy
+        bird.zRotation = vy*0.001
+        
     }
 }
