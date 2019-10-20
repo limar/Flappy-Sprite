@@ -27,7 +27,7 @@ class ViewController: NSViewController {
                 view.presentScene(scene)
             }
             
-            view.ignoresSiblingOrder = false
+            view.ignoresSiblingOrder = true
             
             view.showsFPS = true
             view.showsNodeCount = true

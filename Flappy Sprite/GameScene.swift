@@ -15,12 +15,19 @@ class GameScene: SKScene {
 //    private var spinnyNode : SKShapeNode?
 //    private var landNode: SKSpriteNode!
     private let gamespeed: (CGFloat, Double) = (5.0, 1.0/40)
+    private let obstacleGenerationTime: Double = 2 //1 sec
     private var bird:SKSpriteNode!
+    private var obstacle:SKNode!
+    private var obstacleLayer:SKNode!
 
     override func didMove(to view: SKView) {
         // workaround to apply reference node actions
         self.isPaused = true
         self.isPaused = false
+        
+        bird = self.childNode(withName: "//bird") as? SKSpriteNode
+        obstacle = self.childNode(withName: "obstacle")
+        obstacleLayer = self.childNode(withName: "obstacleLayer")
         
         let landNodes:[SKSpriteNode] = [1,2,3].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
 
@@ -34,13 +41,46 @@ class GameScene: SKScene {
                         node.position.x += node.size.width*3.0
                     }
                 }
+                
+//                var toRemove:[SKNode] = []
+                self.obstacleLayer.children.forEach { node in
+                    node.position.x -= self.gamespeed.0
+//                    if node.position.x < 0.0{
+//                        toRemove.append(node)
+//                    }
+                }
+//                
+//                self.obstacle.removeChildren(in: toRemove)
             },
             SKAction.wait(forDuration: gamespeed.1)
         ])))
+        
+        let minY = self.childNode(withName: "land1")!.frame.maxY
+        let maxY = self.childNode(withName: "sky")!.frame.maxY
+        // Generate obstacles
+        run(SKAction.repeat(SKAction.sequence([
+            SKAction.run{
+                let newObstacle = self.obstacle.copy() as! SKReferenceNode
+                //newObstacle.position = CGPoint(x:0, y:0)
+                //y between floor and upper sky
+                let posY = CGFloat(arc4random_uniform(UInt32(maxY-minY - 160))) + minY + 80.0 //80 - half height of goal sprite
+                newObstacle.position = CGPoint(x:newObstacle.position.x, y:posY)
+                newObstacle.zPosition = 20
+                self.obstacleLayer.addChild(newObstacle)
+            },
+            SKAction.wait(forDuration: self.obstacleGenerationTime)
+        ]), count: 100))
+        
+//        run(SKAction.repeatForever(SKAction.sequence([
+//            SKAction.run{
+//                let newObstacle = self.obstacle.copy() as! SKReferenceNode
+//                self.obstacle.addChild(newObstacle)
+//            },
+//            SKAction.wait(forDuration: self.obstacleGenerationTime)
+//        ])))
 //        let sky = self.childNode(withName: "sky") as! SKSpriteNode
 //        let frameNode = SKShapeNode(rect: sky.frame)
 //        sky.addChild(frameNode)
-        bird = self.childNode(withName: "//bird") as? SKSpriteNode
         
         // Get label node from scene and store it for use later
 //        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
