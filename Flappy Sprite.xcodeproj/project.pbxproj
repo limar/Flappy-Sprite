@@ -18,6 +18,8 @@
 		7F26AE62235C6599000EFECF /* Bird.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE61235C6599000EFECF /* Bird.sks */; };
 		7F26AE64235CA610000EFECF /* Pipes.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE63235CA610000EFECF /* Pipes.sks */; };
 		7F26AE66235CC024000EFECF /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE65235CC024000EFECF /* README.rtf */; };
+		7F26AE69235CCD1C000EFECF /* StartGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE68235CCD1C000EFECF /* StartGame.sks */; };
+		7F26AE6B235CCF93000EFECF /* StartGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26AE6A235CCF93000EFECF /* StartGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7F26AE61235C6599000EFECF /* Bird.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bird.sks; sourceTree = "<group>"; };
 		7F26AE63235CA610000EFECF /* Pipes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Pipes.sks; sourceTree = "<group>"; };
 		7F26AE65235CC024000EFECF /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		7F26AE68235CCD1C000EFECF /* StartGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartGame.sks; sourceTree = "<group>"; };
+		7F26AE6A235CCF93000EFECF /* StartGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +96,10 @@
 				7F26AE41235B9443000EFECF /* Actions.sks */,
 				7F26AE3D235B9443000EFECF /* AppDelegate.swift */,
 				7F26AE47235B9445000EFECF /* Assets.xcassets */,
-				7F26AE61235C6599000EFECF /* Bird.sks */,
-				7F26AE63235CA610000EFECF /* Pipes.sks */,
+				7F26AE67235CCCE7000EFECF /* Scenes */,
 				7F26AE4D235B9445000EFECF /* Flappy_Sprite.entitlements */,
-				7F26AE3F235B9443000EFECF /* GameScene.sks */,
 				7F26AE43235B9443000EFECF /* GameScene.swift */,
+				7F26AE6A235CCF93000EFECF /* StartGame.swift */,
 				7F26AE4C235B9445000EFECF /* Info.plist */,
 				7F26AE49235B9445000EFECF /* Main.storyboard */,
 				7F26AE45235B9443000EFECF /* ViewController.swift */,
@@ -111,6 +114,17 @@
 				7F26AE58235B9445000EFECF /* Info.plist */,
 			);
 			path = "Flappy SpriteTests";
+			sourceTree = "<group>";
+		};
+		7F26AE67235CCCE7000EFECF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7F26AE61235C6599000EFECF /* Bird.sks */,
+				7F26AE63235CA610000EFECF /* Pipes.sks */,
+				7F26AE3F235B9443000EFECF /* GameScene.sks */,
+				7F26AE68235CCD1C000EFECF /* StartGame.sks */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +212,7 @@
 				7F26AE48235B9445000EFECF /* Assets.xcassets in Resources */,
 				7F26AE42235B9443000EFECF /* Actions.sks in Resources */,
 				7F26AE64235CA610000EFECF /* Pipes.sks in Resources */,
+				7F26AE69235CCD1C000EFECF /* StartGame.sks in Resources */,
 				7F26AE62235C6599000EFECF /* Bird.sks in Resources */,
 				7F26AE66235CC024000EFECF /* README.rtf in Resources */,
 				7F26AE4B235B9445000EFECF /* Main.storyboard in Resources */,
@@ -220,6 +235,7 @@
 			files = (
 				7F26AE46235B9443000EFECF /* ViewController.swift in Sources */,
 				7F26AE44235B9443000EFECF /* GameScene.swift in Sources */,
+				7F26AE6B235CCF93000EFECF /* StartGame.swift in Sources */,
 				7F26AE3E235B9443000EFECF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
