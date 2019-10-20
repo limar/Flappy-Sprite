@@ -19,6 +19,7 @@ class GameScene: SKScene {
     private var bird:SKSpriteNode!
     private var obstacle:SKNode!
     private var obstacleLayer:SKNode!
+    private var sky:SKNode!
 
     override func didMove(to view: SKView) {
         // workaround to apply reference node actions
@@ -28,11 +29,13 @@ class GameScene: SKScene {
         bird = self.childNode(withName: "//bird") as? SKSpriteNode
         obstacle = self.childNode(withName: "obstacle")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
+        sky = self.childNode(withName: "sky")!
         
         let landNodes:[SKSpriteNode] = [1,2,3].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
 
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         
+        // Move everything + remove outdated pipes
         run(SKAction.repeatForever(SKAction.sequence([
             SKAction.run{
                 landNodes.forEach { node in
@@ -42,65 +45,35 @@ class GameScene: SKScene {
                     }
                 }
                 
-//                var toRemove:[SKNode] = []
+                var toRemove:[SKNode] = []
                 self.obstacleLayer.children.forEach { node in
                     node.position.x -= self.gamespeed.0
-//                    if node.position.x < 0.0{
-//                        toRemove.append(node)
-//                    }
+                    if node.frame.minX < self.sky.frame.minX{
+                        toRemove.append(node)
+                    }
                 }
-//                
-//                self.obstacle.removeChildren(in: toRemove)
+                toRemove.forEach { node in
+                    node.removeFromParent()
+                }
             },
             SKAction.wait(forDuration: gamespeed.1)
         ])))
         
         let minY = self.childNode(withName: "land1")!.frame.maxY
-        let maxY = self.childNode(withName: "sky")!.frame.maxY
+        let maxY = sky.frame.maxY
         // Generate obstacles
-        run(SKAction.repeat(SKAction.sequence([
+        run(SKAction.repeatForever(SKAction.sequence([
             SKAction.run{
                 let newObstacle = self.obstacle.copy() as! SKReferenceNode
                 //newObstacle.position = CGPoint(x:0, y:0)
                 //y between floor and upper sky
-                let posY = CGFloat(arc4random_uniform(UInt32(maxY-minY - 160))) + minY + 80.0 //80 - half height of goal sprite
+                let posY = CGFloat(arc4random_uniform(UInt32(maxY-minY - 200))) + minY + 80.0 //80 - half height of goal sprite
                 newObstacle.position = CGPoint(x:newObstacle.position.x, y:posY)
                 newObstacle.zPosition = 20
                 self.obstacleLayer.addChild(newObstacle)
             },
             SKAction.wait(forDuration: self.obstacleGenerationTime)
-        ]), count: 100))
-        
-//        run(SKAction.repeatForever(SKAction.sequence([
-//            SKAction.run{
-//                let newObstacle = self.obstacle.copy() as! SKReferenceNode
-//                self.obstacle.addChild(newObstacle)
-//            },
-//            SKAction.wait(forDuration: self.obstacleGenerationTime)
-//        ])))
-//        let sky = self.childNode(withName: "sky") as! SKSpriteNode
-//        let frameNode = SKShapeNode(rect: sky.frame)
-//        sky.addChild(frameNode)
-        
-        // Get label node from scene and store it for use later
-//        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-//        if let label = self.label {
-//            label.alpha = 0.0
-//            label.run(SKAction.fadeIn(withDuration: 2.0))
-//        }
-//
-//        // Create shape node to use during mouse interaction
-//        let w = (self.size.width + self.size.height) * 0.05
-//        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-//
-//        if let spinnyNode = self.spinnyNode {
-//            spinnyNode.lineWidth = 2.5
-//
-//            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-//            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-//                                              SKAction.fadeOut(withDuration: 0.5),
-//                                              SKAction.removeFromParent()]))
-//        }
+        ])))
     }
     
     
