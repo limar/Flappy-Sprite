@@ -18,6 +18,10 @@ class GameScene: SKScene {
     private var bird:SKSpriteNode!
 
     override func didMove(to view: SKView) {
+        // workaround to apply reference node actions
+        self.isPaused = true
+        self.isPaused = false
+        
         let landNodes:[SKSpriteNode] = [1,2,3].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
 
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
@@ -61,8 +65,6 @@ class GameScene: SKScene {
     
     
     func touchDown(atPoint pos : CGPoint) {
-        let v = bird.physicsBody!.velocity
-        print(v.dy)
         if let body = bird.physicsBody{
             body.velocity = CGVector(dx: 0, dy: -10)// 10 m/s falling speed
             body.applyImpulse(CGVector(dx: 0, dy: 0.2))
