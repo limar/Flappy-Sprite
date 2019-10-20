@@ -11,11 +11,12 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
-    private var landNode: SKSpriteNode!
+//    private var label : SKLabelNode?
+//    private var spinnyNode : SKShapeNode?
+//    private var landNode: SKSpriteNode!
     private let gamespeed: (CGFloat, Double) = (5.0, 1.0/40)
-    
+    private var bird:SKSpriteNode!
+
     override func didMove(to view: SKView) {
         let landNodes:[SKSpriteNode] = [1,2,3].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
 
@@ -30,6 +31,10 @@ class GameScene: SKScene {
             },
             SKAction.wait(forDuration: gamespeed.1)
         ])))
+        let sky = self.childNode(withName: "sky") as! SKSpriteNode
+        let frameNode = SKShapeNode(rect: sky.frame)
+        sky.addChild(frameNode)
+        bird = self.childNode(withName: "//bird") as? SKSpriteNode
         
         // Get label node from scene and store it for use later
 //        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
@@ -53,13 +58,15 @@ class GameScene: SKScene {
     }
     
     
-//    func touchDown(atPoint pos : CGPoint) {
+    func touchDown(atPoint pos : CGPoint) {
+        bird.physicsBody!.velocity = CGVector(dx: 0, dy: -10)// 10 m/s falling speed
+        bird.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 0.2))
 //        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
 //            n.position = pos
 //            n.strokeColor = SKColor.green
 //            self.addChild(n)
 //        }
-//    }
+    }
 //
 //    func touchMoved(toPoint pos : CGPoint) {
 //        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -77,9 +84,9 @@ class GameScene: SKScene {
 //        }
 //    }
 //
-//    override func mouseDown(with event: NSEvent) {
-//        self.touchDown(atPoint: event.location(in: self))
-//    }
+    override func mouseDown(with event: NSEvent) {
+        self.touchDown(atPoint: event.location(in: self))
+    }
 //
 //    override func mouseDragged(with event: NSEvent) {
 //        self.touchMoved(toPoint: event.location(in: self))
