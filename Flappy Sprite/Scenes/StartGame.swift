@@ -22,9 +22,13 @@ class StartGameScene: SKScene {
         let loc = event.location(in: self)
         if startButton.frame.contains(loc){
             let scene = SKScene(fileNamed: "GameScene")!
-            scene.scaleMode = .aspectFill
+            scene.scaleMode = .aspectFit
             let transition = SKTransition.crossFade(withDuration: 1)
             self.view?.presentScene(scene, transition: transition)
         }
+    }
+    
+    override func didChangeSize(_ oldSize: CGSize) {
+        print("Sze changed", self.size)
     }
 }
