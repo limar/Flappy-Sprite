@@ -98,8 +98,6 @@
 				7F26AE47235B9445000EFECF /* Assets.xcassets */,
 				7F26AE67235CCCE7000EFECF /* Scenes */,
 				7F26AE4D235B9445000EFECF /* Flappy_Sprite.entitlements */,
-				7F26AE43235B9443000EFECF /* GameScene.swift */,
-				7F26AE6A235CCF93000EFECF /* StartGame.swift */,
 				7F26AE4C235B9445000EFECF /* Info.plist */,
 				7F26AE49235B9445000EFECF /* Main.storyboard */,
 				7F26AE45235B9443000EFECF /* ViewController.swift */,
@@ -122,7 +120,9 @@
 				7F26AE61235C6599000EFECF /* Bird.sks */,
 				7F26AE63235CA610000EFECF /* Pipes.sks */,
 				7F26AE3F235B9443000EFECF /* GameScene.sks */,
+				7F26AE43235B9443000EFECF /* GameScene.swift */,
 				7F26AE68235CCD1C000EFECF /* StartGame.sks */,
+				7F26AE6A235CCF93000EFECF /* StartGame.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

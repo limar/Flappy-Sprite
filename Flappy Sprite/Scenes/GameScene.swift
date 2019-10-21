@@ -9,6 +9,14 @@
 import SpriteKit
 import GameplayKit
 
+enum GameObjectCategory: UInt32{
+    case player = 1
+    case land = 2
+    case pipe = 4
+    case goal = 8
+    case gameFrame = 16
+}
+
 class GameScene: SKScene {
     
 //    private var label : SKLabelNode?
@@ -20,20 +28,25 @@ class GameScene: SKScene {
     private var obstacle:SKNode!
     private var obstacleLayer:SKNode!
     private var sky:SKNode!
+    private var score:SKLabelNode!
+    
+    private var scoreVal: Int = 0
 
     override func didMove(to view: SKView) {
         // workaround to apply reference node actions
         self.isPaused = true
         self.isPaused = false
         
-        bird = self.childNode(withName: "//bird") as? SKSpriteNode
+        bird = (self.childNode(withName: "//bird") as! SKSpriteNode)
         obstacle = self.childNode(withName: "obstacle")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
         sky = self.childNode(withName: "sky")!
+        score = (self.childNode(withName: "score") as! SKLabelNode)
         
         let landNodes:[SKSpriteNode] = [1,2,3].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
 
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        physicsWorld.contactDelegate = self
         
         // Move everything + remove outdated pipes
         run(SKAction.repeatForever(SKAction.sequence([
@@ -133,6 +146,17 @@ class GameScene: SKScene {
         // Called before each frame is rendered
         let vy = bird.physicsBody!.velocity.dy
         bird.zRotation = vy*0.001
-        
+        score.text = "\(scoreVal)"
+    }
+
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+    func didEnd(_ contact: SKPhysicsContact) {
+        if contact.bodyB.categoryBitMask & GameObjectCategory.goal.rawValue == GameObjectCategory.goal.rawValue{
+            scoreVal += 1
+            contact.bodyB.categoryBitMask = 0
+            score.run(SKAction.sequence([SKAction.scale(to: 2.0, duration: 0.1), SKAction.scale(to: 1.0, duration: 0.1)]))
+        }
     }
 }

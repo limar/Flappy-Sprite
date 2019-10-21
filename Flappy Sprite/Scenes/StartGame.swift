@@ -21,7 +21,6 @@ class StartGameScene: SKScene {
     override func mouseDown(with event: NSEvent) {
         let loc = event.location(in: self)
         if startButton.frame.contains(loc){
-            print("here!!")
             let scene = SKScene(fileNamed: "GameScene")!
             scene.scaleMode = .aspectFill
             let transition = SKTransition.crossFade(withDuration: 1)

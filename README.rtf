@@ -9,9 +9,32 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f1\b0 \cf0    - Pipes\
-	add\
-	remove\
-	randomize\
 	collision\
 	pass through goal with goal ++\
-	draw behind floor}
+	draw behind floor\
+\
+   - parallax\
+\
+Collisions:\
+\
+player 1\
+land 10 = 2\
+pipe 100 = 4\
+goal 1000 = 8\
+rectangle 10000 (== ground) = 16\
+\
+collisionmask:\
+player 10110 (ground+pipe) = 22\
+land 1\
+pipe 1\
+goal 0\
+rectangle 1\
+\
+contactmask:\
+player 1100 (pipe or goal) = 12\
+land 0\
+pipe 1\
+goal 1\
+rectangle 0\
+\
+}
