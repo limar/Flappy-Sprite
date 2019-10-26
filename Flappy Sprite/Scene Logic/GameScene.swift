@@ -74,30 +74,32 @@ class GameScene: SKScene {
                 toRemove.forEach { node in
                     node.removeFromParent()
                 }
+                
+                if let lastObstacle = self.obstacleLayer.children.last{
+                    if lastObstacle.position.x < self.frame.maxX - 100.0{
+                        self.genObstacle()
+                    }
+                }else{
+                    self.genObstacle()
+                }
             },
             SKAction.wait(forDuration: gametick)
-        ])))
-        
-        let minY = self.childNode(withName: "land1")!.frame.maxY
-        let maxY = sky.frame.maxY
-        // Generate obstacles
-        run(SKAction.repeatForever(SKAction.sequence([
-            SKAction.run{
-                let newObstacle = self.obstacle.copy() as! SKReferenceNode
-                //newObstacle.position = CGPoint(x:0, y:0)
-                //y between floor and upper sky
-                let posY = CGFloat(arc4random_uniform(UInt32(maxY-minY - 200))) + minY + 80.0 //80 - half height of goal sprite
-                newObstacle.position = CGPoint(x:newObstacle.position.x, y:posY)
-                newObstacle.zPosition = 20
-                self.obstacleLayer.addChild(newObstacle)
-            },
-            SKAction.wait(forDuration: self.obstacleGenerationTime)
         ])))
         
         //sunny cycle
         sun.run(SKAction.move(by: CGVector(dx: -(self.frame.width - sun_frame.width/2.0), dy: 0), duration: 60.0))
     }
     
+    func genObstacle(){
+        let minY = self.childNode(withName: "land1")!.frame.maxY
+        let maxY = sky.frame.maxY
+        let newObstacle = self.obstacle.copy() as! SKReferenceNode
+        let posY = CGFloat(arc4random_uniform(UInt32(maxY-minY - 200))) + minY + 80.0 //80 - half height of goal sprite
+        let pos = self.convert(CGPoint(x:self.frame.maxX + 20, y:posY), to: self.obstacleLayer)
+        newObstacle.position = pos
+        newObstacle.zPosition = 20
+        self.obstacleLayer.addChild(newObstacle)
+    }
     
     func touchDown(atPoint pos : CGPoint) {
         if let body = bird.physicsBody{
