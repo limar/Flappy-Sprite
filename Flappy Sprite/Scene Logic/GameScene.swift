@@ -40,7 +40,9 @@ class GameScene: SKScene {
         self.isPaused = false
         
         bird = (self.childNode(withName: "//bird") as! SKSpriteNode)
-        sun = self.childNode(withName: "SunReference")
+        sun = self.childNode(withName: "sun_container")
+        let sun_frame:CGRect = sun.childNode(withName: "//sun")!.frame
+        
         obstacle = self.childNode(withName: "obstacle")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
         sky = self.childNode(withName: "sky")!
@@ -93,7 +95,7 @@ class GameScene: SKScene {
         ])))
         
         //sunny cycle
-        sun.run(SKAction.move(by: CGVector(dx: -(self.frame.width - sun.frame.width/2.0), dy: 0), duration: 60.0))
+        sun.run(SKAction.move(by: CGVector(dx: -(self.frame.width - sun_frame.width/2.0), dy: 0), duration: 60.0))
     }
     
     
