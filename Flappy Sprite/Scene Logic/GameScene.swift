@@ -44,7 +44,7 @@ class GameScene: SKScene {
         sky = self.childNode(withName: "sky")!
         score = (self.childNode(withName: "score") as! SKLabelNode)
         
-        let landNodes:[SKSpriteNode] = [1,2,3].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
+        let landNodes:[SKSpriteNode] = [1,2,3,4].map { index in  self.childNode(withName:"land\(index)") as! SKSpriteNode}
 
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.contactDelegate = self
@@ -54,8 +54,9 @@ class GameScene: SKScene {
             SKAction.run{
                 landNodes.forEach { node in
                     node.position.x -= self.gamemovedelta
-                    if node.position.x + node.size.width < 0.0{
-                        node.position.x += node.size.width*3.0
+                    
+                    if node.frame.maxX < self.frame.minX{
+                        node.position.x += node.size.width * CGFloat(landNodes.count)
                     }
                 }
                 
