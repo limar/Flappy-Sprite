@@ -22,7 +22,8 @@ class GameScene: SKScene {
 //    private var label : SKLabelNode?
 //    private var spinnyNode : SKShapeNode?
 //    private var landNode: SKSpriteNode!
-    private let gamespeed: (CGFloat, Double) = (5.0, 1.0/40)
+    private var gamemovedelta: CGFloat = 5.0
+    private let gametick: Double  = 1.0/40
     private let obstacleGenerationTime: Double = 2 //1 sec
     private var bird:SKSpriteNode!
     private var obstacle:SKNode!
@@ -52,7 +53,7 @@ class GameScene: SKScene {
         run(SKAction.repeatForever(SKAction.sequence([
             SKAction.run{
                 landNodes.forEach { node in
-                    node.position.x -= self.gamespeed.0
+                    node.position.x -= self.gamemovedelta
                     if node.position.x + node.size.width < 0.0{
                         node.position.x += node.size.width*3.0
                     }
@@ -60,7 +61,7 @@ class GameScene: SKScene {
                 
                 var toRemove:[SKNode] = []
                 self.obstacleLayer.children.forEach { node in
-                    node.position.x -= self.gamespeed.0
+                    node.position.x -= self.gamemovedelta
                     if node.frame.minX < self.sky.frame.minX{
                         toRemove.append(node)
                     }
@@ -69,7 +70,7 @@ class GameScene: SKScene {
                     node.removeFromParent()
                 }
             },
-            SKAction.wait(forDuration: gamespeed.1)
+            SKAction.wait(forDuration: gametick)
         ])))
         
         let minY = self.childNode(withName: "land1")!.frame.maxY
@@ -149,12 +150,19 @@ class GameScene: SKScene {
         score.text = "\(scoreVal)"
     }
 
+    func updateSpeedForScore(){
+        if self.scoreVal % 10 == 0{
+            self.gamemovedelta *= 1.2
+        }
+    }
+
 }
 
 extension GameScene: SKPhysicsContactDelegate {
     func didEnd(_ contact: SKPhysicsContact) {
         if contact.bodyB.categoryBitMask & GameObjectCategory.goal.rawValue == GameObjectCategory.goal.rawValue{
             scoreVal += 1
+            updateSpeedForScore()
             contact.bodyB.categoryBitMask = 0
             score.run(SKAction.sequence([SKAction.scale(to: 2.0, duration: 0.1), SKAction.scale(to: 1.0, duration: 0.1)]))
         }
