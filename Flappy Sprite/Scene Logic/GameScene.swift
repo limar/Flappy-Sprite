@@ -29,6 +29,7 @@ class GameScene: SKScene {
     private var obstacle:SKNode!
     private var obstacleLayer:SKNode!
     private var sky:SKNode!
+    private var sun:SKNode!
     private var score:SKLabelNode!
     
     private var scoreVal: Int = 0
@@ -39,6 +40,7 @@ class GameScene: SKScene {
         self.isPaused = false
         
         bird = (self.childNode(withName: "//bird") as! SKSpriteNode)
+        sun = self.childNode(withName: "SunReference")
         obstacle = self.childNode(withName: "obstacle")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
         sky = self.childNode(withName: "sky")!
@@ -89,6 +91,9 @@ class GameScene: SKScene {
             },
             SKAction.wait(forDuration: self.obstacleGenerationTime)
         ])))
+        
+        //sunny cycle
+        sun.run(SKAction.move(by: CGVector(dx: -(self.frame.width - sun.frame.width/2.0), dy: 0), duration: 60.0))
     }
     
     
