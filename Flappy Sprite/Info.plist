@@ -32,5 +32,9 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Noot.otf</string>
+	</array>
 </dict>
 </plist>

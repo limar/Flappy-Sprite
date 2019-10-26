@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F04C672235E2E0B00E9BA9E /* Sun.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F04C671235E2E0B00E9BA9E /* Sun.sks */; };
+		7F19785923643A110019F803 /* noot-aj.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F19785823643A110019F803 /* noot-aj.ttf */; };
+		7F19785B23643C130019F803 /* Noot.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F19785A23643C130019F803 /* Noot.otf */; };
 		7F26AE3E235B9443000EFECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26AE3D235B9443000EFECF /* AppDelegate.swift */; };
 		7F26AE40235B9443000EFECF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE3F235B9443000EFECF /* GameScene.sks */; };
 		7F26AE42235B9443000EFECF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F26AE41235B9443000EFECF /* Actions.sks */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		7F04C671235E2E0B00E9BA9E /* Sun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Sun.sks; sourceTree = "<group>"; };
+		7F19785823643A110019F803 /* noot-aj.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "noot-aj.ttf"; sourceTree = "<group>"; };
+		7F19785A23643C130019F803 /* Noot.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Noot.otf; sourceTree = "<group>"; };
 		7F26AE3A235B9443000EFECF /* Flappy Sprite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Sprite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F26AE3D235B9443000EFECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F26AE3F235B9443000EFECF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				7F26AE67235CCCE7000EFECF /* Scenes */,
 				7F04C6732364269900E9BA9E /* Scene Logic */,
 				7F26AE4D235B9445000EFECF /* Flappy_Sprite.entitlements */,
+				7F19785823643A110019F803 /* noot-aj.ttf */,
+				7F19785A23643C130019F803 /* Noot.otf */,
 				7F26AE4C235B9445000EFECF /* Info.plist */,
 				7F26AE49235B9445000EFECF /* Main.storyboard */,
 				7F26AE45235B9443000EFECF /* ViewController.swift */,
@@ -222,12 +228,14 @@
 				7F04C672235E2E0B00E9BA9E /* Sun.sks in Resources */,
 				7F26AE40235B9443000EFECF /* GameScene.sks in Resources */,
 				7F26AE48235B9445000EFECF /* Assets.xcassets in Resources */,
+				7F19785923643A110019F803 /* noot-aj.ttf in Resources */,
 				7F26AE42235B9443000EFECF /* Actions.sks in Resources */,
 				7F26AE64235CA610000EFECF /* Pipes.sks in Resources */,
 				7F26AE69235CCD1C000EFECF /* StartGame.sks in Resources */,
 				7F26AE62235C6599000EFECF /* Bird.sks in Resources */,
 				7F26AE66235CC024000EFECF /* README.rtf in Resources */,
 				7F26AE4B235B9445000EFECF /* Main.storyboard in Resources */,
+				7F19785B23643C130019F803 /* Noot.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
